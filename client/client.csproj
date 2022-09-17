@@ -24,6 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ClientApp\proxy.config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ClientApp\ssl\" />
   </ItemGroup>
 
