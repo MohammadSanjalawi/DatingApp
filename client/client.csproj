@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\register\register.component.ts" />
     <None Remove="ClientApp\src\app\_models\user.ts" />
   </ItemGroup>
 

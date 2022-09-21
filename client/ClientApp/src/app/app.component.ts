@@ -12,11 +12,10 @@ export class AppComponent implements OnInit {
   title = 'app';
   users: any;
 
-  constructor(private http: HttpClient, private accountService: AccountService) {
+  constructor(private accountService: AccountService) {
 
   }
   ngOnInit() {
-    this.getUsers();
     this.setCurrentUser();
   }
 
@@ -26,16 +25,7 @@ export class AppComponent implements OnInit {
     this.accountService.setCurrentUser(user);
   }
 
-  getUsers() {
-    console.log("getusers")
-    //console.log("8888884555");
-    this.http.get('https://localhost:44328/api/users').subscribe(response => {
-      this.users = response;
-    }, error => {
-      console.log("888888");
-      console.log(error)
-    })
-  }
+  
 }
 
 
