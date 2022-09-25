@@ -28,6 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\app-routing.module.ts" />
+    <None Remove="ClientApp\src\app\lists\lists.component.ts" />
+    <None Remove="ClientApp\src\app\members\member-detail\member-detail.component.ts" />
+    <None Remove="ClientApp\src\app\members\member-list\member-list.component.ts" />
+    <None Remove="ClientApp\src\app\messages\messages.component.ts" />
     <None Remove="ClientApp\src\app\register\register.component.ts" />
     <None Remove="ClientApp\src\app\_models\user.ts" />
   </ItemGroup>
@@ -55,6 +60,18 @@
     <None Update="ClientApp\package.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Update="ClientApp\src\app\members\member-detail\member-detail.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Update="ClientApp\src\app\members\member-list\member-list.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Update="ClientApp\src\app\messages\messages.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
